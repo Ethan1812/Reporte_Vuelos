@@ -33,6 +33,14 @@
             border: 1px solid #ccc;
             border-radius: 4px;
         }
+        select {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
         button {
             background-color: #4CAF50;
             color: white;
@@ -65,14 +73,33 @@
         <label for="observations">Observaciones:</label>
         <textarea id="observations" name="observations" rows="4"></textarea>
 
+        <label for="activityStatus">Estado de la Actividad:</label>
+        <select id="activityStatus" name="activityStatus">
+            <option value="Recibida">Recibida</option>
+            <option value="EnProceso">En Proceso</option>
+            <option value="Terminada">Terminada</option>
+        </select>
+
         <button type="button" onclick="enviarFormulario()">Enviar Resultados</button>
     </form>
 
     <!-- Script para manejar la visibilidad de los formularios y redireccionamiento -->
     <script>
         function enviarFormulario() {
+            // Obtener datos del formulario
+            var droneType = document.getElementById('droneType').value;
+            var flightDate = document.getElementById('flightDate').value;
+            var flightTime = document.getElementById('flightTime').value;
+            var observations = document.getElementById('observations').value;
+            var activityStatus = document.getElementById('activityStatus').value;
+
             // Aquí puedes agregar el código JavaScript para enviar los datos a tu servidor o realizar alguna acción con los resultados del vuelo.
-            alert("¡Datos enviados con éxito!");
+            alert("¡Datos enviados con éxito!\n" +
+                  "Tipo de Drone: " + droneType + "\n" +
+                  "Fecha del Vuelo: " + flightDate + "\n" +
+                  "Tiempo de Vuelo: " + flightTime + " minutos\n" +
+                  "Observaciones: " + observations + "\n" +
+                  "Estado de la Actividad: " + activityStatus);
 
             // Mostrar el formulario de receptor
             document.getElementById('flightResultsForm').style.display = 'none';
