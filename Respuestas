@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Respuesta a la Actividad</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        p {
+            font-size: 18px;
+            margin-bottom: 20px;
+        }
+        ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        li {
+            margin-bottom: 10px;
+        }
+        li strong {
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>Respuesta a la Actividad</h2>
+
+    <p>Gracias por tu información. La actividad ha sido:</p>
+
+    <ul>
+        <li><strong>Recibida:</strong> [Fecha y hora]</li>
+        <li><strong>En Proceso:</strong> [Fecha y hora]</li>
+        <li><strong>Terminada:</strong> [Fecha y hora]</li>
+    </ul>
+
+</body>
+</html>
