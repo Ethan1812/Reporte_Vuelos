@@ -41,5 +41,15 @@
         <li><strong>Terminada:</strong> [Fecha y hora]</li>
     </ul>
 
+    <p>Información del Vuelo:</p>
+
+    <ul>
+        <li><strong>Tipo de Drone:</strong> [Tipo de Drone]</li>
+        <li><strong>Fecha del Vuelo:</strong> [Fecha del Vuelo]</li>
+        <li><strong>Tiempo de Vuelo:</strong> [Tiempo de Vuelo] minutos</li>
+        <li><strong>Observaciones:</strong> [Observaciones]</li>
+        <li><strong>Estado de la Actividad:</strong> [Estado de la Actividad]</li>
+    </ul>
+
 </body>
 </html>
