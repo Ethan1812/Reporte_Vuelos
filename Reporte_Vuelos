@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForestGuard: Monitoreo de Vuelo</title>
+    <style>
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 20px;
+            background-color: #f5f5f5;
+        }
+        h2 {
+            color: #4CAF50;
+        }
+        form {
+            background-color: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 400px;
+        }
+        label {
+            display: block;
+            margin-bottom: 8px;
+        }
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 16px;
+            box-sizing: border-box;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            font-size: 16px;
+        }
+        button:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+
+    <h2>ForestGuard: Monitoreo de Vuelo</h2>
+
+    <!-- Formulario de Resultados de Vuelo -->
+    <form id="flightResultsForm">
+        <label for="droneType">Tipo de Drone:</label>
+        <input type="text" id="droneType" name="droneType" required>
+
+        <label for="flightDate">Fecha del Vuelo:</label>
+        <input type="date" id="flightDate" name="flightDate" required>
+
+        <label for="flightTime">Tiempo de Vuelo (minutos):</label>
+        <input type="number" id="flightTime" name="flightTime" required>
+
+        <label for="observations">Observaciones:</label>
+        <textarea id="observations" name="observations" rows="4"></textarea>
+
+        <button type="button" onclick="enviarFormulario()">Enviar Resultados</button>
+    </form>
+
+    <!-- Script para manejar la visibilidad de los formularios y redireccionamiento -->
+    <script>
+        function enviarFormulario() {
+            // Aquí puedes agregar el código JavaScript para enviar los datos a tu servidor o realizar alguna acción con los resultados del vuelo.
+            alert("¡Datos enviados con éxito!");
+
+            // Mostrar el formulario de receptor
+            document.getElementById('flightResultsForm').style.display = 'none';
+            document.getElementById('receiverForm').style.display = 'block';
+        }
+
+        function enviarInfoReceptor() {
+            // Aquí puedes agregar el código JavaScript para enviar los datos del receptor a tu servidor o realizar alguna acción.
+            alert("¡Datos del receptor enviados con éxito!");
+            // También puedes utilizar AJAX para enviar los datos asincrónicamente.
+            
+            // Redireccionar a la página de respuesta después de enviar la información del receptor
+            window.location.href = 'respuesta.html';
+        }
+    </script>
+
+    <!-- Formulario del receptor -->
+    <form id="receiverForm" style="display: none;">
+        <h2>Información del Receptor</h2>
+
+        <label for="receiverName">Nombre del Receptor:</label>
+        <input type="text" id="receiverName" name="receiverName" required>
+
+        <label for="receiverEmail">Correo Electrónico del Receptor:</label>
+        <input type="email" id="receiverEmail" name="receiverEmail" required>
+
+        <label for="receiverComments">Comentarios Adicionales:</label>
+        <textarea id="receiverComments" name="receiverComments" rows="4"></textarea>
+
+        <button type="button" onclick="enviarInfoReceptor()">Enviar Información del Receptor</button>
+    </form>
+
+</body>
+</html>
